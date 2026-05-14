@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assets Preview</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Email Assets Preview</h1>
+
+    <!-- Project -->
+    <div class="project">
+      <h2>Reflectiz</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <img src="./images/Reflectiz/coockie.jpg" alt="coockie">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const inputs = document.querySelectorAll("input");
+
+    inputs.forEach(input => {
+      input.addEventListener("click", () => {
+        input.select();
+        navigator.clipboard.writeText(input.value);
+        alert("Link copied!");
+      });
+    });
+  </script>
+
+</body>
+</html>
